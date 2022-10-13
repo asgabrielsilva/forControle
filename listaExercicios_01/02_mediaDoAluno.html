@@ -7,11 +7,14 @@
     */
 
     //ENTRADA
-
+    const quantasNotas = Number(prompt("Quantas notas o aluno obteve?"));
 
     //PROCESSAMENTO
-
+    let notas = 0;
+    for(contador = 1; contador <= quantasNotas; contador++) {
+        notas = Number(prompt(`Qual foi a nota ${contador} que o aluno obteve?`)) + notas;
+    }
 
     //SAÍDA
-
+    document.write((notas/quantasNotas).toFixed(2));
 </script>

@@ -7,11 +7,21 @@
     */
 
     //ENTRADA
-
+    const quantosNumeros = Number(prompt("Quantos números deseja informar?"));
+    let numeros = [];
+    let maiorNumero = 0
 
     //PROCESSAMENTO
-
+    for(contador = 1; contador <= quantosNumeros; contador++) {
+        numeros.push(Number(prompt(`Informe o ${contador}º numero`)));
+    }for(contador2 = 1; contador2 <= quantosNumeros -1; contador2++) {
+        if(numeros[maiorNumero] >= numeros[contador2]) {
+            maiorNumero = numeros[maiorNumero];
+        } else {
+            maiorNumero = numeros[contador2];
+        }
+    }
 
     //SAÍDA
-
+    document.write(maiorNumero);
 </script>
