@@ -6,11 +6,23 @@
     */
 
     //ENTRADA
-
+    let populacao = 50000;
+    let habitantes5Anos = 0;
+    let habitantes10Anos = 10;
+    let taxa = 1.015;
 
     //PROCESSAMENTO
-
+    for(contador = 0; contador <= habitantes10Anos; contador++){
+        populacao = populacao * taxa;
+        if(contador == 5){
+            habitantes5Anos = populacao;
+        }
+        if(contador == 10){
+            habitantes10Anos = populacao;
+        }
+    }
 
     //SAÍDA
-
+    document.write(`Habitantes daqui 5 anos: ${Math.ceil(habitantes5Anos)}<br>`);
+    document.write(`Habitantes daqui 10 anos: ${Math.ceil(habitantes10Anos)}`);
 </script>

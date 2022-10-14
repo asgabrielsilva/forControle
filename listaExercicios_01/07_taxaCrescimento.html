@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
+    let populacao = 80000;
+    let habitantesAtingir = 200000;
+    let taxa = 1.03;
 
     //PROCESSAMENTO
-
+    for(contador = 0; populacao <= habitantesAtingir; contador++){
+        populacao = populacao * taxa;
+    }
 
     //SAÍDA
-
+    document.write(contador);
 </script>

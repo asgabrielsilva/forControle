@@ -6,11 +6,17 @@
     */
 
     //ENTRADA
-
+    let impares = [];
+    let numerosAte = 50
 
     //PROCESSAMENTO
-
+    for(contador = 0; contador <= 50; contador++){
+        if(contador % 2 == 1){
+            impares.push(contador);
+        }
+    }
 
     //SAÍDA
+    document.write(impares.join(", "));
 
 </script>

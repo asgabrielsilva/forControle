@@ -6,10 +6,27 @@
     */
 
     //ENTRADA
-
+    const numInicial = parseInt(prompt("Número Inicial: "));
+    const numFinal = parseInt(prompt("Número Final: "));
 
     //PROCESSAMENTO
-
+    if(numFinal <= numInicial){
+        document.write("O número inicial precisa ser menor que o número final!");
+    }
+    else{
+        let pares = [];
+        let impares = [];
+        for(contador = numInicial; contador <= numFinal; contador++){
+            if(contador % 2 == 0){
+                pares.push(contador);
+            }
+            else{
+                impares.push(contador);
+            }
+        }
+        document.write(`Números Pares: ${pares.join(", ")}<br>`);
+        document.write(`Números Impares: ${impares.join(", ")}`);
+    }
 
     //SAÍDA
 
