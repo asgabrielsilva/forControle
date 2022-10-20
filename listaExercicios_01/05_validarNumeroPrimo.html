@@ -6,12 +6,23 @@
     */
 
     //ENTRADA
-    
+    let numero = Number(prompt("Informe um numero para validarmos se é primo ou não:"));
 
+    let pontos = 0
 
     //PROCESSAMENTO
+    for(contador = 1; contador <= numero; contador++){
+        if(numero % contador == 0){
+            pontos = pontos + 1;
+        }
+        
+    }
 
 
     //SAÍDA
-
+    if(pontos == 2){
+            document.write(`${numero} é um número primo`)
+        }else{
+            document.write(`${numero} não é um número primo`)
+        }
 </script>

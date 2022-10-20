@@ -8,11 +8,44 @@
     */
 
     //ENTRADA
+    const nome1 = prompt("Informe o nome do primeiro candidato:");
+    const nome2 = prompt("Informe o nome do segundo candidato:");
+    const nome3 = prompt("Informe o nome do terceiro candidato:");
 
+    const alunosVotantes = Number(prompt("Informe o número de alunos votantes na sala:"))
+
+    let votos1 = 0;
+    let votos2 = 0;
+    let votos3 = 0;
 
     //PROCESSAMENTO
+    for(contador = 1; contador <= alunosVotantes; contador++){
+        let voto = parseInt(prompt(`Vote 1 para ${nome1}, 2 para ${nome2} e 3 ${nome3}`));
+        switch (voto) {
+            case 1:
+            votos1 = votos1 + 1    
 
+            break;
+
+            case 2:
+
+            votos2 = votos2 + 1  
+
+            break;
+                
+        
+            default:
+            votos3 = votos3 + 1
+            break;
+        }
+    }
+    const porcentagemNome1 = (votos1*100)/alunosVotantes;
+    const porcentagemNome2 = (votos2*100)/alunosVotantes;
+    const porcentagemNome3 = (votos3*100)/alunosVotantes;
 
     //SAÍDA
+    document.write(`O aluno ${nome1} teve ${votos1} votos que é igual a ${porcentagemNome1}% dos votos<br>
+    O aluno ${nome2} teve ${votos2} votos que é igual a ${porcentagemNome2}% dos votos<br>
+    O aluno ${nome3} teve ${votos3} votos que é igual a ${porcentagemNome3}% dos votos<br>`)
 
 </script>
